@@ -1,0 +1,18 @@
+{% extends "_layout" %}
+{% set title = "404" %}
+
+{% block content %}
+{% include "_includes/_sub_header" with { title: 'Страница не найдена', image: 'off', breadcrumb: 'off' } %}
+
+
+<section class="four-not-four-section">
+        <div class="container">
+            <div class="four-not-four-section-wrapper text-center">
+                <h2 class="title">404</h2>
+                <h3 class="sub-title">Страница не найдена</h3>
+                <p>Возникла ошибка или страница, которую вы ищете, не существует.</p>
+                <a href="/" class="custom-button">Перейти на главную</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

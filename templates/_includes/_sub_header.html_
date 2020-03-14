@@ -1,0 +1,46 @@
+{% if image != 'off' %}
+<section class="page-header bg_img" data-background="{{ image }}" style="background-image: url(&quot;{{ image }}&quot;);">
+  <div class="container">
+    <h3 class="title"><span class="shape-wrapper">{{ title }}</span></h3>
+  </div>
+</section>
+{% endif %}
+
+{% if breadcrumb != 'off' %}
+<div class="breadcrumb-section">
+  <div class="container">
+    <div class="breadcrumb-wrapper">
+      {#
+        <div class="breadcrumb-title">
+          <h6 class="title">{{ title }}</h6>
+        </div>
+        #}
+        <ul class="breadcrumb">
+          <li>
+            <a href="/">Главная</a>
+          </li>
+          {% if (craft.app.request.getSegment('1') == 'services' and craft.app.request.getSegment('2') != '') %}
+          <li>
+            <a href="/services">Услуги</a>
+          </li>
+          {% elseif (craft.app.request.getSegment('1') == 'sections' and craft.app.request.getSegment('2') != '') %}
+          <li>
+            <a href="/sections">Секции</a>
+          </li>
+          {% elseif (craft.app.request.getSegment('1') == 'news' and craft.app.request.getSegment('2') != '') %}
+          <li>
+            <a href="/news">Новости</a>
+          </li>
+          {% elseif (craft.app.request.getSegment('1') == 'teachers' and craft.app.request.getSegment('2') != '') %}
+          <li>
+            <a href="/teachers">Преподаватели</a>
+          </li>
+          {% endif %}
+          <li>
+            {{ title }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endif %}

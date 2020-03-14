@@ -1,0 +1,46 @@
+<aside class="sidebar">
+  <div class="widget widget-category">
+    <h5 class="widget-title">Новости</h5>
+    <ul>
+      {% nav category in craft.categories.group('news').all() %}
+      {% set entryCount = craft.entries.relatedTo(category).count() %}
+      <li>
+        <a href="{{ category.url }}">{{ category.title }}<span>{{ entryCount }}</span></a>
+      </li>
+      {% endnav %}
+    </ul>
+  </div>
+  <div class="widget widget-popular">
+    <h5 class="widget-title">Секции</h5>
+    <ul>
+      {% for entry in craft.entries().section('sections').order('RAND()').limit(6).all() %}
+      <li>
+        <div class="widget-popular-thumb">
+          <a href="{{ entry.url }}">
+            {% set image = entry.sectionImage.one() %}
+            <a href="{{ entry.url }}"><img src="{% if image %}{{ image.getUrl('image63x62') }}{% else %}https://via.placeholder.com/63x62?text=Нет&nbsp;фото{% endif %}" alt="{{ entry.title }}"></a>
+          </a>
+        </div>
+        <div class="widget-popular-content">
+          <h6 class="title"><a href="{{ entry.url }}">{{ entry.title }}</a></h6>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="widget widget-post">
+    <h5 class="widget-title">Новые статьи</h5>
+    <ul>
+      {% for entry in craft.entries().section('news').limit(6).all() %}
+      <li>
+        <a href="{{ entry.url }}" class="post-title">{{ entry.title }}</a>
+        <div class="meta-post">
+          <div class="meta-date">
+            <i class="flaticon-calendar"></i> <span>{{ entry.postDate | date("d M Y") }}</span>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</aside>

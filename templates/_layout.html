@@ -1,0 +1,74 @@
+{% set seoDefaultTitle = globalSeo.seoTitle %}
+{% set seoDefaultDescription = globalSeo.seoDescription %}
+{% set seoDefaultImage = globalSeo.seoImage.one() %}
+
+{% if category.title is defined %}
+{% set seoTitle = category.title %}
+{% set seoDescription = false %}
+{% set seoImage = false %}
+{% elseif entry is defined %}
+{% if entry.seoTitle|length %}
+{% set seoTitle = entry.seoTitle %}
+{% else %}
+{% set seoTitle = entry.title %}
+{% endif %}
+
+{% if entry.seoDescription is defined %}
+{% set seoDescription = entry.seoDescription %}
+{% endif %}
+
+{% if entry.seoImage is defined and entry.seoImage != '' and entry.seoImage %}
+{% set seoImage = entry.seoImage.one() %}
+{% endif %}
+{% endif %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>{% if seoTitle is defined %}{{ seoTitle }} - {% elseif seoDefaultTitle is defined %}{{ seoDefaultTitle }} - {% endif %}{{ siteName }}</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700|PT+Serif:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+  <link href="/assets/libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/css/animate.css" rel="stylesheet">
+  <link href="/assets/css/owl.css" rel="stylesheet">
+  <link href="/assets/css/jquery-ui.css" rel="stylesheet">
+  <link href="/assets/css/animation.css" rel="stylesheet">
+  <link href="/assets/css/custom-animate.css" rel="stylesheet">
+  <link href="/assets/css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="/assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/responsive.css" rel="stylesheet">
+  <!-- Color Themes -->
+  <!-- <link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet"> -->
+
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="/assets/js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+    <div class="preloader"></div>
+    {% include "_includes/_header" %}
+    {% if (craft.app.request.getSegment('1') == '') %}
+    {% include "_includes/_slider" %}
+    {% endif %}
+
+    {% block content %}
+    <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+    <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+    {% endblock %}
+
+    {% include "_includes/_footer" %}
+  </div>
+  <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
+
+  {% include "_includes/_js" %}
+  {{ globalAnalytics.commonText|raw }}
+
+</body>
+</html>
