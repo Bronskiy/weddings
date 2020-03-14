@@ -1,0 +1,25 @@
+<section class="blog-section">
+  <div class="pattern-layer" style="background-image:url(/assets/temp_img/2.png)"></div>
+  <div class="auto-container">
+    <div class="sec-title centered">
+      <h2>Блог об организации свадьбы</h2>
+    </div>
+    <div class="row clearfix">
+      {% for entry in craft.entries().sectionId([3, 4, 10, 9, 6, 5, 8, 7, 1]).order('RAND()').limit(4).all() %}
+      <div class="news-block col-lg-3 col-md-4 col-sm-12">
+        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="image">
+            {% set image = entry.backgroundImage.one() %}
+            <a href="{{ entry.url }}">
+              <img src="{% if image %}{{ image.getUrl('image273X273') }}{% else %}https://via.placeholder.com/273?text=Нет&nbsp;фото{% endif %}" alt="{{ entry.title }}" />
+            </a>
+          </div>
+          <div class="lower-box">
+            <h5><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

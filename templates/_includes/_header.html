@@ -1,18 +1,13 @@
-<header class="main-header header-style-one">
-
-  <!--Header-Upper-->
+<header class="main-header   {% if (craft.app.request.getSegment('1') == '') %}header-style-one{% else %}header-style-two{% endif %}">
   <div class="header-upper">
     <div class="auto-container">
       <div class="clearfix">
-
         <div class="pull-left logo-box">
-          <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+          <div class="logo"><a href="/"><img src="/assets/img/logo.png" alt="logo" title="{{ siteName }}"></a></div>
         </div>
 
         <div class="nav-outer clearfix">
-          <!-- Mobile Navigation Toggler -->
           <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-          <!-- Main Menu -->
           <nav class="main-menu navbar-expand-md">
             <div class="navbar-header">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +19,7 @@
 
             <div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
               <ul class="navigation clearfix">
-                {% nav entry in craft.entries.section('mainMenu').level(1).all() %}
+                {% nav entry in craft.entries.section('topMenu').level(1).all() %}
                 {% if entry.hasDescendants() %}
                 <li class="menu-item {% if craft.app.request.segments|first  ==  entry.menuLink|split('/')|slice(1, 2)|join('/') %}active{% endif %}">
                   <a href="#0" class="menu-item-link">{{ entry.title }}</a>
@@ -49,40 +44,6 @@
                 {% endif %}
                 {% endnav %}
               </ul>
-
-              <ul class="navigation clearfix">
-                <li class="current dropdown"><a href="#">Home</a>
-                  <ul>
-                    <li><a href="index.html">Home Page 01</a></li>
-                    <li><a href="index-2.html">Home Page 02</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#">About Us</a>
-                  <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                  </ul>
-                </li>
-                <li><a href="service.html">Services</a></li>
-                <li class="dropdown"><a href="#">Portfolio</a>
-                  <ul>
-                    <li><a href="portfolio.html">Our Portfolio</a></li>
-                    <li><a href="portfolio-collection.html">Portfolio Collection</a></li>
-                    <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
-                    <li><a href="portfolio-single-01.html">Portfolio Single 01</a></li>
-                    <li><a href="portfolio-single-02.html">Portfolio Single 02</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#">Blog</a>
-                  <ul>
-                    <li><a href="blog.html">Our Blog</a></li>
-                    <li><a href="blog-single.html">Blog Single</a></li>
-                    <li><a href="not-found.html">Not Found</a></li>
-                  </ul>
-                </li>
-                <li><a href="contact.html">Contact us</a></li>
-              </ul>
             </div>
 
           </nav>
@@ -90,16 +51,15 @@
           <div class="outer-box">
 
             <ul class="social-icon-one">
-              <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-              <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-              <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-              <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+              <li><a href="{{ globalInstagram.textFormatted }}" target="_blank"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="{{ globalVk.textFormatted }}" target="_blank"><span class="fa fa-vk"></span></a></li>
+              <li><a href="{{ globalYoutube.textFormatted }}" target="_blank"><span class="fa fa-youtube"></span></a></li>
+              <li><a href="{{ globalFacebook.textFormatted }}" target="_blank"><span class="fa fa-facebook-f"></span></a></li>
             </ul>
 
-            <div class="btn-box">
-              <a href="contact.html" class="theme-btn btn-style-one"><span class="txt">VIEW COLLECTION</span></a>
+            <div class="">
+              <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
             </div>
-
           </div>
 
         </div>
@@ -107,42 +67,35 @@
       </div>
     </div>
   </div>
-  <!--End Header Upper-->
 
-  <!-- Sticky Header  -->
   <div class="sticky-header">
     <div class="auto-container clearfix">
-      <!--Logo-->
       <div class="logo pull-left">
-        <a href="index.html" title=""><img src="images/logo-2.png" alt="" title=""></a>
+        <a href="/"><img src="/assets/img/logo.png" alt="logo" title="{{ siteName }}"></a>
       </div>
-      <!--Right Col-->
       <div class="pull-right">
-        <!-- Main Menu -->
         <nav class="main-menu">
           <!--Keep This Empty / Menu will come through Javascript-->
-        </nav><!-- Main Menu End-->
+        </nav>
         <div class="outer-box">
           <ul class="social-icon-one">
-            <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-            <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+            <li><a href="{{ globalInstagram.textFormatted }}" target="_blank"><span class="fa fa-instagram"></span></a></li>
+            <li><a href="{{ globalVk.textFormatted }}" target="_blank"><span class="fa fa-vk"></span></a></li>
+            <li><a href="{{ globalYoutube.textFormatted }}" target="_blank"><span class="fa fa-youtube"></span></a></li>
+            <li><a href="{{ globalFacebook.textFormatted }}" target="_blank"><span class="fa fa-facebook-f"></span></a></li>
           </ul>
         </div>
-        <!-- Mobile Navigation Toggler -->
         <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
       </div>
     </div>
-  </div><!-- End Sticky Menu -->
+  </div>
 
-  <!-- Mobile Menu  -->
   <div class="mobile-menu">
     <div class="menu-backdrop"></div>
     <div class="close-btn"><span class="icon fa fa-remove"></span></div>
 
     <nav class="menu-box">
-      <div class="nav-logo"><a href="index.html"><img src="images/logo-3.png" alt="" title=""></a></div>
+      <div class="nav-logo"><a href="/"><img src="/assets/img/logo.png" alt="logo" title="{{ siteName }}"></a></div>
       <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
     </nav>
   </div><!-- End Mobile Menu -->

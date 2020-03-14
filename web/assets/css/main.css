@@ -91,7 +91,8 @@ h1,h2,h3,h4,h5,h6 {
 	margin:0px;
 	background:none;
 	line-height:1.6em;
-	font-family: 'PT Sans', sans-serif;
+	/* font-family: 'PT Sans', sans-serif; */
+	font-family: 'PT Serif', serif;
 }
 
 /* Typography */
@@ -674,7 +675,9 @@ Main Header style
 	z-index:10;
 	padding:30px 0px;
 }
-
+.main-header .header-upper .logo-box .logo img{
+	max-height: 54px;
+}
 .main-header .main-box .logo-box .logo img{
 	display:inline-block;
 	max-width:100%;
@@ -742,7 +745,9 @@ Main Header style
 .sticky-header .logo{
 	padding:8px 0px 8px;
 }
-
+.sticky-header .logo img{
+	max-height: 54px;
+}
 .fixed-header .sticky-header{
 	z-index:999;
 	opacity:1;
@@ -1876,7 +1881,7 @@ Blog Section
 .news-block .inner-box .lower-box{
 	position:relative;
 	padding:20px 0px 18px;
-	border-bottom:1px solid #bfaca4;
+	/* border-bottom:1px solid #bfaca4; */
 }
 
 .news-block .inner-box .lower-box h5{

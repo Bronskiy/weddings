@@ -35,8 +35,8 @@
   <div class="auto-container">
     <!-- Sec Title -->
     <div class="sec-title">
-      <div class="title">OUR COLLECTION</div>
-      <h2>Explore Our Spring Collections</h2>
+      <!-- <div class="title">OUR COLLECTION</div> -->
+      <h2>Фотогалерея свадеб</h2>
     </div>
     <div class="row clearfix">
 
@@ -191,64 +191,11 @@
     </div>
   </div>
 </section>
-<!-- End Week Section -->
 
-<!-- Blog Section -->
-<section class="blog-section">
-  <div class="pattern-layer" style="background-image:url(/assets/temp_img/2.png)"></div>
-  <div class="auto-container">
-    <!-- Sec Title -->
-    <div class="sec-title centered">
-      <div class="title">OUR BLOG</div>
-      <h2>Read inspiring forever stories</h2>
-    </div>
-    <div class="row clearfix">
+  {% include "_includes/_team_section" %}
 
-      <!-- News Block -->
-      <div class="news-block col-lg-4 col-md-6 col-sm-12">
-        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-          <div class="image">
-            <a href="blog-single.html"><img src="/assets/temp_img/news-1.jpg" alt="" /></a>
-          </div>
-          <div class="lower-box">
-            <h5><a href="blog-single.html">Zain & Bobby</a></h5>
-          </div>
-        </div>
-      </div>
+{% include "_includes/_blog_section" %}
 
-      <!-- News Block -->
-      <div class="news-block col-lg-4 col-md-6 col-sm-12">
-        <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-          <div class="image">
-            <a href="blog-single.html"><img src="/assets/temp_img/news-2.jpg" alt="" /></a>
-          </div>
-          <div class="lower-box">
-            <h5><a href="blog-single.html">Mark & Juliet Tie The Knot</a></h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- News Block -->
-      <div class="news-block col-lg-4 col-md-6 col-sm-12">
-        <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-          <div class="image">
-            <a href="blog-single.html"><img src="/assets/temp_img/news-3.jpg" alt="" /></a>
-          </div>
-          <div class="lower-box">
-            <h5><a href="blog-single.html">Forever and Ever with Asha & Jay</a></h5>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="button-box text-center">
-      <a href="#" class="theme-btn btn-style-two"><span class="txt">Load More</span></a>
-    </div>
-
-  </div>
-</section>
-<!-- End Blog Section -->
 
 <!-- Image Section -->
 <section class="image-section">
@@ -258,113 +205,38 @@
 </section>
 <!-- End Image Section -->
 
-<!-- Testimonial Section -->
 <section class="testimonial-section">
   <div class="auto-container">
-    <!-- Sec Title -->
     <div class="sec-title centered">
-      <div class="title">Testimonial</div>
-      <h2>What Our Clients Say</h2>
+      <div class="title">Присылайте отзывы нам на e-mail: <a href="mailto:{{ globalEmail.textFormatted }}">{{ globalEmail.textFormatted }}</a></div>
+      <h2>Отзывы о нашей работе</h2>
     </div>
-
-    <!-- Client Testimonial Carousel -->
     <div class="client-testimonial-carousel owl-carousel owl-theme">
-
-      <!--Testimonial Block One-->
+      {% for entry in craft.entries().section('reviews').limit(12).all() %}
       <div class="testimonial-block-one">
         <div class="inner-box">
-          <div class="text">“ The images you captured were precise, natural and beautiful. We spent so much time with our guests due to the fact that you knew exactly the right time to do everything, taking us away when guests wouldn't even notice we were gone ”</div>
+          <div class="text">{{ entry.commonText }}</div>
         </div>
       </div>
-
-      <!--Testimonial Block One-->
-      <div class="testimonial-block-one">
-        <div class="inner-box">
-          <div class="text">“ The images you captured were precise, natural and beautiful. We spent so much time with our guests due to the fact that you knew exactly the right time to do everything, taking us away when guests wouldn't even notice we were gone ”</div>
-        </div>
-      </div>
-
-      <!--Testimonial Block One-->
-      <div class="testimonial-block-one">
-        <div class="inner-box">
-          <div class="text">“ The images you captured were precise, natural and beautiful. We spent so much time with our guests due to the fact that you knew exactly the right time to do everything, taking us away when guests wouldn't even notice we were gone ”</div>
-        </div>
-      </div>
-
-      <!--Testimonial Block One-->
-      <div class="testimonial-block-one">
-        <div class="inner-box">
-          <div class="text">“ The images you captured were precise, natural and beautiful. We spent so much time with our guests due to the fact that you knew exactly the right time to do everything, taking us away when guests wouldn't even notice we were gone ”</div>
-        </div>
-      </div>
-
-      <!--Testimonial Block One-->
-      <div class="testimonial-block-one">
-        <div class="inner-box">
-          <div class="text">“ The images you captured were precise, natural and beautiful. We spent so much time with our guests due to the fact that you knew exactly the right time to do everything, taking us away when guests wouldn't even notice we were gone ”</div>
-        </div>
-      </div>
-
-      <!--Testimonial Block One-->
-      <div class="testimonial-block-one">
-        <div class="inner-box">
-          <div class="text">“ The images you captured were precise, natural and beautiful. We spent so much time with our guests due to the fact that you knew exactly the right time to do everything, taking us away when guests wouldn't even notice we were gone ”</div>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
-
-    <!--Product Thumbs Carousel-->
     <div class="client-thumb-outer">
       <div class="client-thumbs-carousel owl-carousel owl-theme">
+        {% for entry in craft.entries().section('reviews').limit(12).all() %}
         <div class="thumb-item">
-          <figure class="thumb-box"><img src="/assets/temp_img/author-1.jpg" alt=""></figure>
+          {% set image = entry.commonImage.one() %}
+          <figure class="thumb-box">
+            <img src="{% if image %}{{ image.getUrl('image84X84') }}{% else %}https://via.placeholder.com/84?text=Нет&nbsp;фото{% endif %}" alt="{{ entry.title }}">
+          </figure>
           <div class="thumb-content">
-            <h3>Shopnil mahdi </h3>
-            <div class="designation">CEO</div>
+            <h3>{{ entry.title }}</h3>
           </div>
         </div>
-        <div class="thumb-item">
-          <figure class="thumb-box"><img src="/assets/temp_img/author-2.jpg" alt=""></figure>
-          <div class="thumb-content">
-            <h3>Shopnil mahdi </h3>
-            <div class="designation">CEO</div>
-          </div>
-        </div>
-        <div class="thumb-item">
-          <figure class="thumb-box"><img src="/assets/temp_img/author-3.jpg" alt=""></figure>
-          <div class="thumb-content">
-            <h3>Shopnil mahdi </h3>
-            <div class="designation">CEO</div>
-          </div>
-        </div>
-        <div class="thumb-item">
-          <figure class="thumb-box"><img src="/assets/temp_img/author-1.jpg" alt=""></figure>
-          <div class="thumb-content">
-            <h3>Shopnil mahdi </h3>
-            <div class="designation">CEO</div>
-          </div>
-        </div>
-        <div class="thumb-item">
-          <figure class="thumb-box"><img src="/assets/temp_img/author-2.jpg" alt=""></figure>
-          <div class="thumb-content">
-            <h3>Shopnil mahdi </h3>
-            <div class="designation">CEO</div>
-          </div>
-        </div>
-        <div class="thumb-item">
-          <figure class="thumb-box"><img src="/assets/temp_img/author-3.jpg" alt=""></figure>
-          <div class="thumb-content">
-            <h3>Shopnil mahdi </h3>
-            <div class="designation">CEO</div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
-
   </div>
 </section>
-<!-- End Testimonial Section -->
 
 <!-- Booking Section -->
 <section class="booking-section" style="background-image: url(/assets/temp_img/4.jpg)">
