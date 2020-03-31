@@ -45,25 +45,23 @@
                 {% endnav %}
               </ul>
             </div>
-
           </nav>
 
           <div class="outer-box">
-
-            <ul class="social-icon-one">
+            <!-- <ul class="social-icon-one">
               <li><a href="{{ globalInstagram.textFormatted }}" target="_blank"><span class="fa fa-instagram"></span></a></li>
               <li><a href="{{ globalVk.textFormatted }}" target="_blank"><span class="fa fa-vk"></span></a></li>
               <li><a href="{{ globalYoutube.textFormatted }}" target="_blank"><span class="fa fa-youtube"></span></a></li>
               <li><a href="{{ globalFacebook.textFormatted }}" target="_blank"><span class="fa fa-facebook-f"></span></a></li>
-            </ul>
+            </ul> -->
 
-            <div class="">
-              <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
-            </div>
+              <p>
+                <strong>Консультация по телефону</strong><br>
+                <i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i> Доступны в <a href="{{ globalWhatsapp.textUnformatted }}">WhatsApp</a>
+              </p>
           </div>
-
         </div>
-
       </div>
     </div>
   </div>
@@ -78,12 +76,17 @@
           <!--Keep This Empty / Menu will come through Javascript-->
         </nav>
         <div class="outer-box">
-          <ul class="social-icon-one">
+          <!-- <ul class="social-icon-one">
             <li><a href="{{ globalInstagram.textFormatted }}" target="_blank"><span class="fa fa-instagram"></span></a></li>
             <li><a href="{{ globalVk.textFormatted }}" target="_blank"><span class="fa fa-vk"></span></a></li>
             <li><a href="{{ globalYoutube.textFormatted }}" target="_blank"><span class="fa fa-youtube"></span></a></li>
             <li><a href="{{ globalFacebook.textFormatted }}" target="_blank"><span class="fa fa-facebook-f"></span></a></li>
-          </ul>
+          </ul> -->
+          <p>
+            <strong>Консультация по телефону</strong><br>
+            <i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i> Доступны в <a href="{{ globalWhatsapp.textUnformatted }}">WhatsApp</a>
+          </p>
         </div>
         <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
       </div>

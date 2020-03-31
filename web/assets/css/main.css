@@ -60,8 +60,8 @@ Global Settings
 
 body {
 	font-family: 'PT Sans', sans-serif;
-	font-size:14px;
-	color:#777777;
+	font-size:16px;
+	color:#212529;
 	line-height:1.7em;
 	font-weight:400;
 	background:#ffffff;
@@ -131,9 +131,11 @@ textarea{
 
 p{
 	position:relative;
-	line-height:1.8em;
+	line-height:1.5em;
 }
-
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after{
+	margin: unset;
+}
 .auto-container{
 	position:static;
 	max-width:1200px;
@@ -189,7 +191,6 @@ img{
 	overflow: hidden;
 	overflow:hidden;
 	background-color: #0e0e0e;
-	text-transform: capitalize;
 }
 
 .btn-style-one:before{
@@ -239,7 +240,6 @@ img{
 	overflow:hidden;
 	border:1px solid #a68a80;
 	background-color: #ffffff;
-	text-transform: capitalize;
 }
 
 .btn-style-two:before{
@@ -289,7 +289,6 @@ img{
 	overflow: hidden;
 	overflow:hidden;
 	background-color: #a68a80;
-	text-transform: capitalize;
 }
 
 .btn-style-three:before{
@@ -338,7 +337,6 @@ img{
 	overflow: hidden;
 	border-radius: 50px;
 	overflow:hidden;
-	text-transform: capitalize;
 	border:2px solid rgba(255,255,255,0.60);
 }
 
@@ -387,7 +385,6 @@ img{
 	font-weight:400;
 	border-radius:50px;
 	background-color:#6b1dce;
-	text-transform:capitalize;
 	padding:16px 25px 16px 65px;
 }
 
@@ -423,7 +420,6 @@ img{
 	overflow: hidden;
 	border-radius: 5px;
 	overflow:hidden;
-	text-transform: capitalize;
 	background-color:#ffffff;
 }
 
@@ -574,7 +570,7 @@ Section Title
 	position:relative;
 	color:#1c1c1c;
 	font-weight:600;
-	font-size:40px;
+	font-size:3rem;
 	line-height:1.2em;
 	margin-top:10px;
 }
@@ -701,15 +697,18 @@ Main Header style
 .main-header .header-upper .outer-box{
 	position:relative;
 	float:right;
-	padding:21px 0px;
-	margin-left:15px;
+	color: #fff;
+	padding:13px 0 0px;
+	margin-left:35px;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
 }
-
+.main-header .header-upper .outer-box a{
+	color: #fff;
+}
 .main-header .header-upper .outer-box .nav-toggler{
 	position:relative;
 	font-size:28px;
@@ -733,7 +732,7 @@ Main Header style
 	top:0px;
 	width:100%;
 	padding:0px 0px;
-	background:#222222;
+	background:#fff;
 	z-index:0;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
@@ -772,11 +771,16 @@ Main Header style
 	-op-animation-iteration-count: 1;
 	-webkit-animation-iteration-count: 1;
 	animation-iteration-count: 1;
+	-webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .sticky-header .main-menu .navigation > li > a{
 	padding:23px 0px;
-	color:#ffffff !important;
+	color:#1c1c1c !important;
 }
 
 .sticky-header .main-menu .navigation > li > a:after{
@@ -837,7 +841,7 @@ Main Header style
 .main-menu .navigation > li{
 	position:relative;
 	float:left;
-	margin-right:25px;
+	margin-right:20px;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -883,7 +887,7 @@ Main Header style
 .main-menu .navigation > li > a{
 	position:relative;
 	display:block;
-	color:#ffffff;
+	color:#fff;
 	text-align:center;
 	line-height:30px;
 	text-transform:uppercase;
@@ -891,7 +895,7 @@ Main Header style
 	opacity:1;
 	font-weight:400;
 	padding:35px 0px;
-	font-size:16px;
+	font-size:14px;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -1057,7 +1061,6 @@ Main Header style
 	line-height:24px;
 	font-weight:400;
 	font-size:15px;
-	text-transform:capitalize;
 	color:#222222;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
@@ -1474,7 +1477,6 @@ Mobile Menu
 	padding: 10px 20px;
 	font-size: 15px;
 	color: #404040;
-	text-transform: capitalize;
 }
 
 .mobile-menu .navigation li:hover > a,
@@ -1521,15 +1523,40 @@ Mobile Menu
 
 .main-header .sticky-header .outer-box{
 	float:left;
-	margin-left:15px;
-	padding:26px 0px;
+	margin-left:35px;
+	padding:3px 0 0px;
 	transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-webkit-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
 }
+.main-header .sticky-header .outer-box p{
+	margin-bottom: 5px;
+}
+.main-header .sticky-header .outer-box p a{
+	color: #1c1c1c;
+}
+.main-header .sticky-header .outer-box p i:first-of-type{
+	font-size: 24px;
+  vertical-align: bottom;
+}
+.big-number{
+	float: left;
+	color: #ffffff;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 48px;
+}
 
+.big-number span{
+	background-color: #5f119e;
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+	display: block;
+	text-align: center;
+}
 /***
 
 ====================================================================
@@ -2164,21 +2191,20 @@ Main Footer
 
 .main-footer .footer-widget h5{
 	position:relative;
-	font-weight:500;
+	font-weight:bold;
 	color:#393939;
-	margin-bottom:18px;
-	text-transform:capitalize;
+	margin-bottom:5px;
 }
-
 .main-footer .logo-widget{
 	position:relative;
 }
-
 .main-footer .logo-widget .logo{
 	position:relative;
 	margin-bottom:12px;
 }
-
+.main-footer .logo-widget .logo img{
+	max-width: 300px;
+}
 .main-footer .logo-widget .text{
 	position:relative;
 	font-size:15px;
@@ -2188,11 +2214,9 @@ Main Footer
 	line-height:1.7em;
 	margin-bottom:25px;
 }
-
 .main-footer .logo-widget .social-nav{
 	position:relative;
 }
-
 .main-footer .logo-widget .social-nav li{
 	position:relative;
 	margin-right:8px;
@@ -2896,7 +2920,7 @@ Booking Section
 .call-to-action-two-section h2{
 	position:relative;
 	line-height:1.2em;
-	color:#242424;
+	color:#fff;
 	font-weight:500;
 }
 
@@ -3015,7 +3039,7 @@ Team Section
 .team-member .inner-box .lower-content .designation{
 	position:relative;
 	color:#1c1c1c;
-	font-size:14px;
+	font-size:16px;
 	opacity:0.8;
 }
 
@@ -3714,7 +3738,6 @@ Sidebar Page Container
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 1.3em;
-	text-transform: capitalize;
 }
 
 /* News Detail */
@@ -3825,7 +3848,6 @@ Sidebar Page Container
 	line-height: 1em;
 	margin-right: 6px;
 	display: inline-block;
-	text-transform:capitalize;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -3973,7 +3995,6 @@ Sidebar Page Container
 	color:#0b0f18;
 	font-weight:700;
 	margin-bottom:25px;
-	text-transform:capitalize;
 }
 
 /* Comment Box */
@@ -4063,7 +4084,6 @@ Sidebar Page Container
 	display:inline-block;
 	letter-spacing:1px;
 	margin-top:18px;
-	text-transform:capitalize;
 	background-color:#eeeae8;
 	transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
@@ -4151,9 +4171,22 @@ Comment Form
 .comment-form .theme-btn{
 	position:relative;
 	cursor:pointer;
-	text-transform:capitalize;
 }
-
+.informatsionnyyBlok i::before{
+	font-size: 5rem;
+	color: #5f119e;
+}
+.informatsionnyyBlok h4{
+	font-weight: bold;
+}
+.dopolnitelNyeUslugi img{
+	max-width: 72px;
+	width: 100%;
+}
+.dopolnitelNyeUslugi h5{
+	font-size: 18px;
+	font-weight: bold;
+}
 /* Instagram Widget */
 
 .instagram-widget .post-thumb{
@@ -4279,7 +4312,6 @@ Comment Form
 	font-weight:500;
 	color:#0b0f18;
 	line-height:1.5em;
-	text-transform:capitalize;
 }
 
 .sidebar .popular-posts .post .text a{
@@ -4995,7 +5027,6 @@ Error Section
 	color:#0e0e0e;
 	font-size:16px;
 	margin-top:50px;
-	text-transform:capitalize;
 	display:inline-block;
 	text-decoration:underline;
 	font-family: 'PT Serif', serif;
@@ -5017,21 +5048,17 @@ Contact Page Section
 .contact-page-section .info-column{
 	position:relative;
 }
-
 .contact-page-section .info-column .inner-column{
 	position:relative;
 }
-
 .contact-page-section .info-column .title{
 	position:relative;
 	color:#a68a80;
 	font-size:16px;
 	margin-bottom:20px;
 	padding-bottom:12px;
-	text-transform:capitalize;
 	border-bottom:1px solid #ebebeb;
 }
-
 .contact-page-section .info-column .text{
 	position:relative;
 	color:#393939;
@@ -5039,12 +5066,10 @@ Contact Page Section
 	margin-bottom:20px;
 	line-height:1.7em;
 }
-
 .contact-page-section .info-column .phone-numbers{
 	position:relative;
 	margin-bottom:20px;
 }
-
 .contact-page-section .info-column .phone-numbers a{
 	position:relative;
 	color:#393939;
@@ -5052,12 +5077,10 @@ Contact Page Section
 	margin-bottom:20px;
 	line-height:1.7em;
 }
-
 .contact-page-section .info-column .email-number{
 	position:relative;
 	margin-bottom:20px;
 }
-
 .contact-page-section .info-column .email-number a{
 	position:relative;
 	color:#393939;
@@ -5066,20 +5089,16 @@ Contact Page Section
 	line-height:1.7em;
 	text-decoration:underline;
 }
-
 .contact-page-section .form-column{
 	position:relative;
 }
-
 .contact-page-section .form-column .inner-column{
 	position:relative;
 	padding:0px 80px;
 }
-
 .contact-form .form-group{
 	margin-bottom:22px;
 }
-
 .contact-form .form-group input[type="text"],
 .contact-form .form-group input[type="password"],
 .contact-form .form-group input[type="tel"],
@@ -5101,7 +5120,6 @@ Contact Page Section
 	-moz-transition:all 300ms ease;
 	transition:all 300ms ease;
 }
-
 .contact-form .form-group input[type="text"]:focus,
 .contact-form .form-group input[type="password"]:focus,
 .contact-form .form-group input[type="tel"]:focus,
@@ -5110,7 +5128,6 @@ Contact Page Section
 .contact-form .form-group textarea:focus{
 	border-color:#a68a80;
 }
-
 .contact-form .form-group textarea{
 	position:relative;
 	display:block;
@@ -5129,11 +5146,9 @@ Contact Page Section
 	-moz-transition:all 300ms ease;
 	transition:all 300ms ease;
 }
-
 .contact-form .theme-btn{
 	cursor:pointer;
 }
-
 .contact-form input.error,
 .contact-form select.error,
 .contact-form textarea.error{
