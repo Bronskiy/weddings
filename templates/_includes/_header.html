@@ -1,4 +1,17 @@
 <header class="main-header {% if (craft.app.request.getSegment('1') == '') %}header-style-one{% else %}header-style-two{% endif %}">
+  <div class="header-upper-top">
+    <div class="auto-container">
+      <div class="clearfix">
+        <div class="outer-box text-center d-md-none d-lg-none">
+          <p><strong>Консультация по телефону</strong></p>
+          <ul class="d-inline-block">
+              <li class="list-inline-item"><i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a></li>
+              <li class="list-inline-item"><i class="fa fa-whatsapp" aria-hidden="true"></i> Доступны в <a href="https://wa.me/{{globalWhatsapp.textUnformatted|replace('/[^0-9]/', '') }}" target="_blank">WhatsApp</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="header-upper">
     <div class="auto-container">
       <div class="clearfix">
@@ -43,6 +56,9 @@
                 </li>
                 {% endif %}
                 {% endnav %}
+                <li class="menu-item">
+                  <a class="menu-item-link" href="#" data-toggle="modal" data-target="#modalRequest">Оставить заявку</a>
+                </li>
               </ul>
             </div>
           </nav>
@@ -51,7 +67,7 @@
               <p>
                 <strong>Консультация по телефону</strong><br>
                 <i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
-                <i class="fa fa-whatsapp" aria-hidden="true"></i> Доступны в <a href="{{ globalWhatsapp.textUnformatted }}">WhatsApp</a>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i> Доступны в <a href="https://wa.me/{{globalWhatsapp.textUnformatted|replace('/[^0-9]/', '') }}" target="_blank">WhatsApp</a>
               </p>
           </div>
         </div>
@@ -68,17 +84,11 @@
         <nav class="main-menu">
           <!--Keep This Empty / Menu will come through Javascript-->
         </nav>
-        <div class="outer-box">
-          <!-- <ul class="social-icon-one">
-            <li><a href="{{ globalInstagram.textFormatted }}" target="_blank"><span class="fa fa-instagram"></span></a></li>
-            <li><a href="{{ globalVk.textFormatted }}" target="_blank"><span class="fa fa-vk"></span></a></li>
-            <li><a href="{{ globalYoutube.textFormatted }}" target="_blank"><span class="fa fa-youtube"></span></a></li>
-            <li><a href="{{ globalFacebook.textFormatted }}" target="_blank"><span class="fa fa-facebook-f"></span></a></li>
-          </ul> -->
+        <div class="outer-box d-none d-lg-block">
           <p>
             <strong>Консультация по телефону</strong><br>
             <i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
-            <i class="fa fa-whatsapp" aria-hidden="true"></i> Доступны в <a href="{{ globalWhatsapp.textUnformatted }}">WhatsApp</a>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i> Доступны в <a href="https://wa.me/{{globalWhatsapp.textUnformatted|replace('/[^0-9]/', '') }}" target="_blank">WhatsApp</a>
           </p>
         </div>
         <div class="mobile-nav-toggler"><span class="icon fa fa-bars"></span></div>

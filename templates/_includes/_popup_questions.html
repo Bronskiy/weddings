@@ -1,19 +1,135 @@
-<div class="modal fade" id="modalQuestions" tabindex="-1" role="dialog" aria-labelledby="modalQuestionsLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalQuestionsLabel">Ответить на 3 вопроса</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+  {% set form = craft.expressforms.form("threeQuestions") %}
+  <div class="modal fade" id="modalQuestions" tabindex="-1" role="dialog" aria-labelledby="modalQuestionsLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRequestLabel">{{ form.name }}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          {# Flash Success #}
+          {% if form.submittedSuccessfully %}
+          <div class="alert alert-success" role="alert">
+            {{ "Form has been submitted successfully!"|t }}
+          </div>
+          {% endif %}
+
+          {# General Error Handling #}
+          {% if not form.valid %}
+          <div class="alert alert-danger" role="alert">
+            {{ "Error! Please review the form and try submitting again."|t }}
+            {% if form.errors|length %}
+            <ul>
+              {% for error in form.errors %}
+              <li>{{ error|t }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {# Automatically set Form tags with Return, CSRF and Honeypot (if enabled) #}
+          {{ form.openTag({ return: '/thank-you/726' }) }}
+
+          <div class="form-group{{ form.fields.howMuch.hasErrors ? ' has-error' }}">
+              <label for="howMuch"{{ form.fields.howMuch.isRequired ? ' class="required"' }}>
+                  {{ form.fields.howMuch.label }}
+              </label>
+              <select name="howMuch" id="howMuch" class="form-control">
+                  <option value="">Кол-во человек</option>
+                  <option disabled>──────────</option>
+                  <option{{ "до 20 человек" in form.fields.howMuch.value ? " selected" }}>до 20 человек</option>
+                  <option{{ "от 20 до 40 человек" in form.fields.howMuch.value ? " selected" }}>от 20 до 40 человек</option>
+                  <option{{ "от 40 до 60 человек" in form.fields.howMuch.value ? " selected" }}>от 40 до 60 человек</option>
+                  <option{{ "более 60 человек" in form.fields.howMuch.value ? " selected" }}>более 60 человек</option>
+              </select>
+          </div>
+
+          <div class="form-group{{ form.fields.where.hasErrors ? ' has-error' }}">
+              <label for="where"{{ form.fields.where.isRequired ? ' class="required"' }}>
+                  {{ form.fields.where.label }}
+              </label>
+              <select name="where" id="where" class="form-control">
+                  <option value="">Место</option>
+                  <option disabled>──────────</option>
+                  <option{{ "Москва" in form.fields.where.value ? " selected" }}>Москва</option>
+                  <option{{ "Московская область" in form.fields.where.value ? " selected" }}>Московская область</option>
+                  <option{{ "Я не знаю" in form.fields.where.value ? " selected" }}>Я не знаю</option>
+              </select>
+          </div>
+          {#
+          <div class="form-group{{ form.fields.where.hasErrors ? ' has-error' }}">
+              <label{{ form.fields.where.isRequired ? ' class="required"' }}>
+                  {{ form.fields.where.label }}
+              </label>
+              <div class="form-check">
+                  <label class="form-check-label" for="how-heard-newspaper">
+                      <input type="checkbox" class="form-check-input"
+                             name="where[]" id="how-heard-newspaper"
+                             value="Москва"{{ "Москва" in form.fields.where.value ? " checked" }}
+                      />
+                      Москва
+                  </label>
+              </div>
+              <div class="form-check">
+                  <label class="form-check-label" for="how-heard-radio">
+                      <input type="checkbox" class="form-check-input"
+                             name="where[]" id="how-heard-radio"
+                             value="Московская область"{{ "Московская область" in form.fields.where.value ? " checked" }}
+                      />
+                      Московская область
+                  </label>
+              </div>
+              <div class="form-check">
+                  <label class="form-check-label" for="how-heard-friend">
+                      <input type="checkbox" class="form-check-input"
+                             name="where[]" id="how-heard-friend"
+                             value="Я не знаю"{{ "Я не знаю" in form.fields.where.value ? " checked" }}
+                      />
+                      Я не знаю
+                  </label>
+              </div>
+              <ul class="errors">
+                  <li>{{ "This field is required!"|t }}</li>
+              </ul>
+          </div>
+          #}
+
+          <div class="form-group{{ form.fields.when.hasErrors ? ' has-error' }}">
+              <label for="when"{{ form.fields.when.isRequired ? ' class="required"' }}>
+                  {{ form.fields.when.label }}
+              </label>
+              <select name="when" id="when" class="form-control">
+                  <option value="">Период</option>
+                  <option disabled>──────────</option>
+                  <option{{ "Лето 2020" in form.fields.when.value ? " selected" }}>Лето 2020</option>
+                  <option{{ "Осень 2020" in form.fields.when.value ? " selected" }}>Осень 2020</option>
+                  <option{{ "Зима 2021" in form.fields.when.value ? " selected" }}>Зима 2021</option>
+                  <option{{ "Весна 2021" in form.fields.when.value ? " selected" }}>Весна 2021</option>
+                  <option{{ "Лето 2021 или позже" in form.fields.when.value ? " selected" }}>Лето 2021 или позже</option>
+              </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12{{ form.fields.phone.hasErrors ? ' has-error' }}">
+              <label for="phone"{{ form.fields.phone.isRequired ? ' class="required"' }}>
+                {{ form.fields.phone.label }}
+              </label>
+              <input type="text" name="phone" id="phone" value="{{ form.fields.phone.value }}" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group{% if form.recaptcha.hasErrors %} has-error{% endif %}">
+            <label class="required">
+              Подтвердите что вы не робот...
+            </label>
+            {{ form.recaptcha.render }}
+          </div>
+          <button type="submit" class="btn btn-primary">Заказать</button>
+          <br><small>Мы не передаем Вашу персональную информацию третьим лицам</small>
+          {{ form.closeTag }}
+        </div>
       </div>
     </div>
   </div>
-</div>

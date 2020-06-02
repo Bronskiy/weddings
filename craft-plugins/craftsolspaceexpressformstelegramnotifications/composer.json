@@ -1,0 +1,46 @@
+{
+    "name": "bronskiycraftsolpaceexpressformstelegram/craft-solspace-express-forms-telegram-notifications",
+    "description": "Notifications to Telegram group via bot for Craft Solspace Express Forms Telegram ",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft solspace express forms telegram notifications"
+    ],
+    "support": {
+        "docs": "https://github.com/bronskiy/craft-solspace-express-forms-telegram-notifications/blob/master/README.md",
+        "issues": "https://github.com/bronskiy/craft-solspace-express-forms-telegram-notifications/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikolay Bronskiy",
+            "homepage": "https://www.bronskiy.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "require-dev": {
+      "craftcms/cms": "^3.2.0",
+      "codeception/codeception": "^3.0",
+      "vlucas/phpdotenv": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "bronskiycraftsolpaceexpressformstelegram\\craftsolspaceexpressformstelegramnotifications\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft Solspace Express Forms Telegram Notifications",
+        "handle": "craft-solspace-express-forms-telegram-notifications",
+        "developer": "Nikolay Bronskiy",
+        "developerUrl": "https://www.bronskiy.com",
+        "documentationUrl": "https://github.com/bronskiy/craft-solspace-express-forms-telegram-notifications/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/bronskiy/craft-solspace-express-forms-telegram-notifications/master/CHANGELOG.md",
+        "class": "bronskiycraftsolpaceexpressformstelegram\\craftsolspaceexpressformstelegramnotifications\\CraftSolspaceExpressFormsTelegramNotifications"
+    }
+}

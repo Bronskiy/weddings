@@ -1,0 +1,30 @@
+{% extends "_layout" %}
+{% set description = false %}
+{% block content %}
+
+{% include "_includes/_sub_header" with { title: entry.title, image: 'off', breadcrumb: 'on' } %}
+
+<section class="page-title style-one">
+  <div class="auto-container">
+    <h1>{{ entry.title }}</h1>
+  </div>
+</section>
+<div class="sidebar-page-container">
+  <div class="">
+    <div class="row clearfix">
+      <div class="content-side col-12">
+        <div class="news-detail">
+          <div class="inner-box">
+            <div class="lower-content">
+              <div class="auto-container pb-3 pt-3 text-center">
+                {{ entry.commonBody }}
+                <a href="/" class="theme-btn btn-style-three mt-3"><span class="txt">Вернуться на главную</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

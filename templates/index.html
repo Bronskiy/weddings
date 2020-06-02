@@ -4,14 +4,32 @@
 {% for block in entry.mainBlocks.all() %}
 
 {% if block.type == 'videoZastavka' %}
-
+{% set image = block.fonovayaKartinkaDlyaMobilNykhUstroystv.one() %}
+<section class="banner-section-mobile" style="background-image: url({{ image.getUrl() }});background-size: cover;background-position: center;">
+    <div id="vidtop-content">
+      <div class="vid-info-mobile">
+        <div class="auto-container">
+          <div class="content-box text-center">
+            <h1>{{ block.zagolovok }}</h1>
+            <div class="text">{{ block.podzagolovok }}</div>
+            <div class="row clearfix">
+              {% for service in block.uslugi %}
+              <div class="col-lg-3 col-md-3 col-sm-12 mt-3">
+                {{ service.ikonka|raw }}
+                <h5>{{ service.nazvanie }}</h5>
+                {{ service.tekst }}<br>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
 <section class="banner-section">
   <div class="video-background">
     <div class="video-foreground">
       <iframe src="https://www.youtube.com/embed/cJqyBSUUg0U?version=3&controls=0&mute=1&showinfo=0&rel=0&autoplay=1&loop=1&playlist=cJqyBSUUg0U&enablejsapi=1&origin=https://weddings.ru" frameborder="0" allowfullscreen></iframe>
-      <!-- <iframe id="player" type="text/html" width="640" height="390"
-  src="https://www.youtube.com/embed/cJqyBSUUg0U?controls=0&showinfo=0&rel=0&autoplay=1&loop=1enablejsapi=1&origin=https://weddings.ru"
-  frameborder="0" allowfullscreen></iframe> -->
     </div>
   </div>
 
@@ -101,8 +119,9 @@
             <!-- Overlay Box -->
             <div class="overlay-box">
               <div class="overlay-inner">
-                <div class="content">
-                  <h3><a href="#" data-toggle="modal" data-target="#modalGallery{{ loop.index }}">{{ imageSet.nazvanie }}</a></h3>
+                <div class="content portfolio-item" data-blockid="{{ imageSet.id }}" id="portfolio-item-{{ imageSet.id }}">
+                  <h3>{{ imageSet.nazvanie }}</h3>
+                  {# <h3><a href="#" data-toggle="modal" data-target="#modalGallery{{ imageSet.id }}" id="portfolio-item-{{ imageSet.id }}">{{ imageSet.nazvanie }}</a></h3> #}
                 </div>
               </div>
             </div>
@@ -197,7 +216,7 @@
         </div>
       </div>
       <div class="col-12 text-center">
-        <a href="#" class="theme-btn btn-style-three" data-toggle="modal" data-target="#modalMeet"><span class="txt">Оставить заявку на встречу</span></a>
+        <a href="#" class="theme-btn btn-style-three" data-toggle="modal" data-target="#modalRequest"><span class="txt">Оставить заявку на встречу</span></a>
 
       </div>
     </div>
@@ -257,19 +276,21 @@
     <div class="sec-title centered">
       <h2>{{ block.nazvanieSektsii }}</h2>
     </div>
-    <div class="row clearfix">
+    <div class="row clearfix" id="accordionExample1">
       <div class="col">
-        <div class="accordion" id="accordionExample1">
+        <div class="accordion" >
+          {% set counter = 0 %}
           {% for faq in block.voprosOtvetLeft %}
+          {% set counter = ( counter | default(0) ) + 1 %}
           <div class="card">
-            <div class="card-header" id="headingOne1">
+            <div class="card-header" id="headingOne">
               <h5 class="mb-0">
-                <a class="acc-btn" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="true" aria-controls="collapse{{ loop.index }}">
+                <a class="acc-btn" type="button" data-toggle="collapse" data-target="#collapse{{ counter }}" aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ counter }}">
                   {{ faq.vopros }}
                 </a>
               </h5>
             </div>
-            <div id="collapse{{ loop.index }}" class="collapse {% if loop.first %}show{% endif %}" aria-labelledby="headingOne1" data-parent="#accordionExample1">
+            <div id="collapse{{ counter }}" class="collapse {% if loop.first %}show{% endif %}" aria-labelledby="headingOne" data-parent="#accordionExample1">
               <div class="card-body">{{ faq.otvet }}</div>
             </div>
           </div>
@@ -277,17 +298,18 @@
         </div>
       </div>
       <div class="col">
-        <div class="accordion" id="accordionExample2">
+        <div class="accordion">
           {% for faq in block.voprosOtvetRight %}
+          {% set counter = ( counter | default(0) ) + 1 %}
           <div class="card">
-            <div class="card-header" id="headingTwo2">
+            <div class="card-header" id="headingOne">
               <h5 class="mb-0">
-                <a class="acc-btn" type="button" data-toggle="collapse" data-target="#collapse2{{ loop.index }}" aria-expanded="true" aria-controls="collapse2{{ loop.index }}">
+                <a class="acc-btn" type="button" data-toggle="collapse" data-target="#collapse{{ counter }}" aria-expanded="false" aria-controls="collapse{{ counter }}">
                   {{ faq.vopros }}
                 </a>
               </h5>
             </div>
-            <div id="collapse2{{ loop.index }}" class="collapse {% if loop.first %}show{% endif %}" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
+            <div id="collapse{{ counter }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
               <div class="card-body">{{ faq.otvet }}</div>
             </div>
           </div>

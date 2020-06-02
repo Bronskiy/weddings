@@ -56,8 +56,8 @@
 
   {% endif %}
 
-  <link href="/assets/css/responsive.css" rel="stylesheet">
   <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/responsive.css" rel="stylesheet">
   <!-- Color Themes -->
   <!-- <link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet"> -->
 
@@ -88,9 +88,51 @@
 
   {% endif %}
 
-  {# include "_includes/_popup_gallery" %}
-  {% include "_includes/_popup_questions" #}
+  {% include "_includes/_popup_gallery" %}
+  {% include "_includes/_popup_questions" %}
+  {% include "_includes/_popup_request" %}
 
+  <script type="text/javascript" src="https://questcorp.events/assets/js/jquery.paroller.min.js"></script>
+  <script>
+  jQuery(document).ready(function ($) {
+
+    //$('.parallax-window').paroller();
+    var portfolioModal = $('#ng-portfolio');
+    $('.portfolio-item').on('click',function(){
+      var blockId = $(this).attr('data-blockid');
+        console.log('clicked '+blockId);
+      if(blockId){
+        $.ajax({
+          type:"GET",
+          url:"/api/portfolio/"+blockId+".json",
+          success:function(res){
+            if(res){
+              var html_to_append = '';
+              $.each(res.data, function(i, item) {
+                console.log(item);
+                $.each(item.photos, function(j, image) {
+                  html_to_append +=
+                  '<div class="grid-item"><a href="' + image.images + '" data-fancybox="images"><img src="'+ image.images_cropped + '" ></a></div>';
+                    console.log(image.images);
+                });
+              });
+            }else{
+                console.log('error');
+            }
+            portfolioModal.find('.grid-body').html(html_to_append);
+            portfolioModal.modal('show');
+          }
+        });
+      }else{
+          console.log('nothing');
+      }
+    });
+
+  });
+  $(window).on('beforeunload', function() {
+    //$(window).scrollTop(0);
+  });
+  </script>
   {{ globalAnalytics.commonText|raw }}
 </body>
 </html>

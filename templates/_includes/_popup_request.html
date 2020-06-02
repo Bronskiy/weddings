@@ -1,0 +1,65 @@
+{% set form = craft.expressforms.form("popupRequest") %}
+<div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalRequestLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalRequestLabel">{{ form.name }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        {# Flash Success #}
+        {% if form.submittedSuccessfully %}
+        <div class="alert alert-success" role="alert">
+          {{ "Form has been submitted successfully!"|t }}
+        </div>
+        {% endif %}
+
+        {# General Error Handling #}
+        {% if not form.valid %}
+        <div class="alert alert-danger" role="alert">
+          {{ "Error! Please review the form and try submitting again."|t }}
+          {% if form.errors|length %}
+          <ul>
+            {% for error in form.errors %}
+            <li>{{ error|t }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {# Automatically set Form tags with Return, CSRF and Honeypot (if enabled) #}
+        {{ form.openTag({ return: '/thank-you/726' }) }}
+
+        <div class="form-row">
+          <div class="form-group col-md-12{{ form.fields.name.hasErrors ? ' has-error' }}">
+            <label for="name"{{ form.fields.name.isRequired ? ' class="required"' }}>
+              {{ form.fields.name.label }}
+            </label>
+            <input type="text" name="name" id="name" value="{{ form.fields.name.value }}" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-12{{ form.fields.phone.hasErrors ? ' has-error' }}">
+            <label for="phone"{{ form.fields.phone.isRequired ? ' class="required"' }}>
+              {{ form.fields.phone.label }}
+            </label>
+            <input type="text" name="phone" id="phone" value="{{ form.fields.phone.value }}" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group{% if form.recaptcha.hasErrors %} has-error{% endif %}">
+          <label class="required">
+            Подтвердите что вы не робот...
+          </label>
+          {{ form.recaptcha.render }}
+        </div>
+        <button type="submit" class="btn btn-primary">Заказать</button>
+        <br><small>Мы не передаем Вашу персональную информацию третьим лицам</small>
+        {{ form.closeTag }}
+      </div>
+    </div>
+  </div>
+</div>

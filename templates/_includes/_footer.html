@@ -22,11 +22,11 @@
             <h5>Телефон</h5>
             <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
             <h5>Консультация</h5>
-            <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
+            <a href="tel:{{globalPhoneConsult.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhoneConsult.textUnformatted }}</span></a><br>
             <h5>Whatsapp</h5>
-            <a href="tel:{{globalPhone.textUnformatted|replace('/[^0-9+]/', '') }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
+            <a href="https://wa.me/{{globalWhatsapp.textUnformatted|replace('/[^0-9]/', '') }}" target="_blank"><span>{{ globalWhatsapp.textUnformatted }}</span></a><br>
             <h5>Email</h5>
-            <a href="tel:{{globalEmail.textUnformatted }}"><span>{{ globalPhone.textUnformatted }}</span></a><br>
+            <a href="mailto:{{globalEmail.textFormatted }}"><span>{{ globalEmail.textFormatted }}</span></a><br>
           </div>
         </div>
 
