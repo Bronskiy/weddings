@@ -1,0 +1,22 @@
+{% extends "_layout" %}
+{% set description = false %}
+{% block content %}
+
+{% include "_includes/_sub_header" with { title: entry.title, image: '/assets/img/5.jpg', breadcrumb: 'on' } %}
+
+<section class="collection-section" id="photo">
+  <div class="auto-container">
+      <div class="row clearfix">
+        {% for video in entry.videoKod %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-2 mb-2">
+          <div class="embed-responsive embed-responsive-16by9">
+            {{ video.embedKod|raw }}
+          </div>
+          <h5>{{ video.nazvanie }}</h5>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+</section>
+
+{% endblock %}

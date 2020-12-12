@@ -1,0 +1,33 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  bbbf2e07-1f7c-4da8-9189-bce3dfe7fb25:
+    tabs:
+      -
+        fields:
+          543c0d9b-561c-472e-a408-36f913f85ee1:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  543c0d9b-561c-472e-a408-36f913f85ee1:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: fotogalereya
+name: Фотогалерея
+sortOrder: 5

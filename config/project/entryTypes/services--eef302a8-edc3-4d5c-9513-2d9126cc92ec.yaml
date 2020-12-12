@@ -1,0 +1,21 @@
+fieldLayouts:
+  9d62974f-c8d1-4e5a-8aaf-da18488082c5:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Название
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: f5981f03-279f-4df9-9d48-616284ed18c6
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+handle: services
+hasTitleField: true
+name: Услуги
+section: f2be860b-264e-4253-b24d-f08b2986c764
+sortOrder: 1
+titleFormat: ''

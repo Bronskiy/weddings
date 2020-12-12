@@ -1,0 +1,41 @@
+fieldLayouts:
+  0ce7da64-ba67-4d09-921a-1e2fbea8775c:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Заголовок
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: d478ac41-0b02-46cb-ae57-dc9bdf2571d4
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f8021b67-d04e-4085-84a7-b5711b172ce1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 6f88a03a-33fb-4d2f-b242-3afcba0a503b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c0460d48-be5b-4ecb-8774-8ea7db527712
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d56e0025-f9a1-41b3-9bc6-156f2d8cc48d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: svadebnyeVedushchie
+hasTitleField: true
+name: 'Как выбрать свадебного ведущего?'
+section: 52e3d1d4-fd81-47b9-a61d-00861b8336f9
+sortOrder: 1
+titleFormat: '{section.name|raw}'

@@ -1,0 +1,134 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  b3edaebb-771a-451a-9373-d76561651c35:
+    tabs:
+      -
+        fields:
+          0b148c04-976e-4c03-abfa-5b1f4b84c051:
+            required: false
+            sortOrder: 2
+          1d1faead-16e8-42f5-aa1c-e75d68d69fb2:
+            required: false
+            sortOrder: 3
+          f3a08f9b-39b6-4503-94ea-e8d650bef74a:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  0b148c04-976e-4c03-abfa-5b1f4b84c051:
+    contentColumnType: text
+    fieldGroup: null
+    handle: podzagolovok
+    instructions: ''
+    name: Подзаголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  1d1faead-16e8-42f5-aa1c-e75d68d69fb2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: infobloki
+    instructions: ''
+    name: Инфоблоки
+    searchable: true
+    settings:
+      addRowLabel: 'Добавить строку'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Иконка
+                -
+                  - handle
+                  - ikonka
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Заголовок
+                -
+                  - handle
+                  - zagolovok
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Текст
+                -
+                  - handle
+                  - tekst
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - multiline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  f3a08f9b-39b6-4503-94ea-e8d650bef74a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: informatsionnyyBlok
+name: 'Информационный блок'
+sortOrder: 3

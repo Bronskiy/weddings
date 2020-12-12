@@ -1,0 +1,45 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  95284471-08cf-46d4-b169-815e16474c1c:
+    tabs:
+      -
+        fields:
+          766482a9-adb2-40f0-9f52-a80fd61e748e:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  766482a9-adb2-40f0-9f52-a80fd61e748e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: izobrazhenie
+    instructions: ''
+    name: Изображение
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Добавить изображение'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: imageSlider
+name: 'Image Slider'
+sortOrder: 6

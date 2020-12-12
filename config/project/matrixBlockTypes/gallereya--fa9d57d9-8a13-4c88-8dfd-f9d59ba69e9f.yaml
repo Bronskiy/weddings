@@ -1,0 +1,44 @@
+field: f8021b67-d04e-4085-84a7-b5711b172ce1
+fieldLayouts:
+  1325fa5e-d951-4125-b13b-1fa4bec123ae:
+    tabs:
+      -
+        fields:
+          5f63e38c-0a86-41e3-80db-23308d0d0e0c:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  5f63e38c-0a86-41e3-80db-23308d0d0e0c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: foto
+    instructions: ''
+    name: Фото
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      defaultUploadLocationSubpath: ''
+      limit: '4'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Добавить изображения'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: gallereya
+name: Галлерея
+sortOrder: 3

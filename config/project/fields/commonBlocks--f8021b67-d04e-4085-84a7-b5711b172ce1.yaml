@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: fddde6dc-4161-4e53-a814-d162f88e1f06
+handle: commonBlocks
+instructions: ''
+name: Блоки
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_commonblocks}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

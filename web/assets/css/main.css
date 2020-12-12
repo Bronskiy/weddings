@@ -164,6 +164,18 @@ img{
 	display:inline-block;
 	max-width:100%;
 }
+.m-t100 {
+	margin-top:100px;
+}
+.m-b100 {
+	margin-bottom: 100px;
+}
+.m-t30 {
+	margin-top: 30px;
+}
+.m-b30 {
+	margin-bottom: 30px;
+}
 
 .theme-btn{
 	display:inline-block;
@@ -5361,6 +5373,11 @@ Contact Page Section
 	}
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+	.header-upper-top{
+		color: #fff;
+	}
+}
 /*
 ##Device = Tablets, Ipads (portrait)
 ##Screen = B/w 768px to 1024px
@@ -5373,6 +5390,23 @@ Contact Page Section
 	}
 	.main-menu .navigation > li{
 		margin-right: 10px;
+	}
+	.banner-section .content-box h1 {
+		font-size: 32px;
+		line-height: 1em;
+		margin-bottom: 10px;
+	}
+	.banner-section .content-box .text{
+		font-size: 24px;
+    line-height: 1em;
+	}
+	.collection-block .inner-box .overlay-box h3{
+		font-size: 24px;
+	}
+	.main-footer .logo-widget .social-nav li a{
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
 	}
 }
 

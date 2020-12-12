@@ -2,5 +2,5 @@
 User-agent: *
 Disallow: /craft/
 
-Host: https://weddings.ru/
 Sitemap: https://weddings.ru/sitemap.xml
+Host: https://weddings.ru/

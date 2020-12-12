@@ -1,0 +1,28 @@
+contentColumnType: string
+fieldGroup: fddde6dc-4161-4e53-a814-d162f88e1f06
+handle: commonImage
+instructions: ''
+name: Изображение
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Добавить изображение'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: ''
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

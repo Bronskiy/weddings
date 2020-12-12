@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: f1c98c1f-1d3a-4b88-9c23-84c01dc3d040
+handle: menuLink
+instructions: ''
+name: Ссылка
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

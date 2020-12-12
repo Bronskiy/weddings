@@ -1,0 +1,54 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  b5869f13-1c22-4e6f-bfca-8c7144e605d5:
+    tabs:
+      -
+        fields:
+          12bfe398-89a5-49aa-ac2a-fb30eb6b871f:
+            required: false
+            sortOrder: 2
+          221d25da-eb9b-4fdf-8d37-1685e72035f0:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  12bfe398-89a5-49aa-ac2a-fb30eb6b871f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: podzagolovok
+    instructions: ''
+    name: Подзаголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  221d25da-eb9b-4fdf-8d37-1685e72035f0:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: otzyvy
+name: Отзывы
+sortOrder: 11

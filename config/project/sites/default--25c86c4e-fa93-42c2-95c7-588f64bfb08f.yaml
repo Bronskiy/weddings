@@ -1,0 +1,8 @@
+baseUrl: $DEFAULT_SITE_URL
+handle: default
+hasUrls: true
+language: ru-RU
+name: weddings.ru
+primary: true
+siteGroup: 1c5d9f03-1adc-450c-9205-7e2af1912384
+sortOrder: 1

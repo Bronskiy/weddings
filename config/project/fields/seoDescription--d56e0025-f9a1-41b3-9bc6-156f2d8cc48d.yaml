@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 93b6ce64-2581-486e-8b16-28a998d6f468
+handle: seoDescription
+instructions: ''
+name: 'SEO описание'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

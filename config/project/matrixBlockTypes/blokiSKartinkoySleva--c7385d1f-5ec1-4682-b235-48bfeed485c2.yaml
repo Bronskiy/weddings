@@ -1,0 +1,70 @@
+field: f8021b67-d04e-4085-84a7-b5711b172ce1
+fieldLayouts:
+  96a899a7-501d-420d-8649-d88ea9ef55b7:
+    tabs:
+      -
+        fields:
+          02309df9-cab4-47dd-a280-4cfb213a4864:
+            required: false
+            sortOrder: 2
+          c0bfe081-8969-4271-9a19-d23330522ae8:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  02309df9-cab4-47dd-a280-4cfb213a4864:
+    contentColumnType: text
+    fieldGroup: null
+    handle: tekst
+    instructions: ''
+    name: Текст
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  c0bfe081-8969-4271-9a19-d23330522ae8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: izobrazhenie
+    instructions: ''
+    name: Изображение
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Добавить изображение'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: blokiSKartinkoySleva
+name: 'Блоки с картинкой слева'
+sortOrder: 2

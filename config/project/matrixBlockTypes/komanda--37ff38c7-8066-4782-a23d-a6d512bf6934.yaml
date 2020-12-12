@@ -1,0 +1,54 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  8b608071-bb31-4ce3-861d-4b913a8c3b77:
+    tabs:
+      -
+        fields:
+          c7f21a90-e707-4965-8673-ae07ef2329b6:
+            required: false
+            sortOrder: 2
+          d4966484-f31a-4afe-bb98-b7a2ea927717:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  c7f21a90-e707-4965-8673-ae07ef2329b6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: podzagolovok
+    instructions: ''
+    name: Подзаголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d4966484-f31a-4afe-bb98-b7a2ea927717:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: komanda
+name: Команда
+sortOrder: 10

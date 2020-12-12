@@ -1,0 +1,28 @@
+contentColumnType: string
+fieldGroup: 7acfc232-44a5-4fd4-b4ce-222c82c4cb9f
+handle: serviceIcon
+instructions: ''
+name: Иконка
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Добавить иконку'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: ''
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,8 @@
+handle: common
+hasUrls: true
+name: Общие
+settings:
+  path: '@root/web/images/common'
+sortOrder: 1
+type: craft\volumes\Local
+url: '@web/images/common'

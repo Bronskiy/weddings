@@ -1,0 +1,18 @@
+fieldLayouts:
+  357d52f4-8ba5-4f31-854f-0a2425d4a07a:
+    tabs:
+      -
+        fields:
+          6f88a03a-33fb-4d2f-b242-3afcba0a503b:
+            required: false
+            sortOrder: 1
+          c0460d48-be5b-4ecb-8774-8ea7db527712:
+            required: false
+            sortOrder: 2
+          d56e0025-f9a1-41b3-9bc6-156f2d8cc48d:
+            required: false
+            sortOrder: 3
+        name: Контент
+        sortOrder: 1
+handle: globalSeo
+name: 'SEO по умолчанию'

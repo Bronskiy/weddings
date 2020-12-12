@@ -1,0 +1,37 @@
+fieldLayouts:
+  bfac4339-be74-4004-b131-798dde7362a6:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Главная
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 6f88a03a-33fb-4d2f-b242-3afcba0a503b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c0460d48-be5b-4ecb-8774-8ea7db527712
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d56e0025-f9a1-41b3-9bc6-156f2d8cc48d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: home
+hasTitleField: true
+name: Главная
+section: bec9978b-995a-4c2e-b95c-455962393442
+sortOrder: 1
+titleFormat: '{section.name|raw}'

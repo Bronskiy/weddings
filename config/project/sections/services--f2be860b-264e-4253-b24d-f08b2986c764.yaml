@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: services
+name: Услуги
+propagationMethod: all
+siteSettings:
+  25c86c4e-fa93-42c2-95c7-588f64bfb08f:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: ''
+type: channel

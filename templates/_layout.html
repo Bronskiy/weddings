@@ -3,23 +3,27 @@
 {% set seoDefaultImage = globalSeo.seoImage.one() %}
 
 {% if category.title is defined %}
-{% set seoTitle = category.title %}
-{% set seoDescription = false %}
-{% set seoImage = false %}
+
+  {% set seoTitle = category.title %}
+  {% set seoDescription = false %}
+  {% set seoImage = false %}
+
 {% elseif entry is defined %}
-{% if entry.seoTitle|length %}
-{% set seoTitle = entry.seoTitle %}
-{% else %}
-{% set seoTitle = entry.title %}
-{% endif %}
 
-{% if entry.seoDescription is defined %}
-{% set seoDescription = entry.seoDescription %}
-{% endif %}
+  {% if entry.seoTitle|length %}
+    {% set seoTitle = entry.seoTitle %}
+  {% else %}
+    {% set seoTitle = entry.title %}
+  {% endif %}
 
-{% if entry.seoImage is defined and entry.seoImage != '' and entry.seoImage %}
-{% set seoImage = entry.seoImage.one() %}
-{% endif %}
+  {% if entry.seoDescription is defined %}
+    {% set seoDescription = entry.seoDescription %}
+  {% endif %}
+
+  {% if entry.seoImage is defined and entry.seoImage != '' and entry.seoImage %}
+    {% set seoImage = entry.seoImage.one() %}
+  {% endif %}
+
 {% endif %}
 
 
@@ -32,6 +36,7 @@
   <meta name="yandex-verification" content="c41eb52ea3667e2c" />
   <meta name="google-site-verification" content="3_7-ypNc1A-p1y00mMRXfLAmKnpoUPZ8o73lMNDJm2M" />
   <title>{% if seoTitle is defined %}{{ seoTitle }} - {% elseif seoDefaultTitle is defined %}{{ seoDefaultTitle }} - {% endif %}{{ siteName }}</title>
+  <meta name="description" content="{% if seoDescription is defined %}{{ seoDescription|striptags }}{% else %}{{ seoDefaultDescription|striptags }}{% endif %}"/>
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">

@@ -1,0 +1,54 @@
+field: f8021b67-d04e-4085-84a7-b5711b172ce1
+fieldLayouts:
+  41398521-fa07-41ee-a131-34ee65b214e7:
+    tabs:
+      -
+        fields:
+          2570c1d8-c80c-41c2-af43-03e36e0dd4ed:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2570c1d8-c80c-41c2-af43-03e36e0dd4ed:
+    contentColumnType: text
+    fieldGroup: null
+    handle: spisok
+    instructions: ''
+    name: Список
+    searchable: true
+    settings:
+      addRowLabel: 'Добавить строку'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Текст
+                -
+                  - handle
+                  - tekst
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+handle: gorizontalNyySpisok
+name: 'Горизонтальный список'
+sortOrder: 1

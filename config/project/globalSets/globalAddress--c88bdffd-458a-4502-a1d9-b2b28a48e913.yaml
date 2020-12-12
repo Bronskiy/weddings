@@ -1,0 +1,12 @@
+fieldLayouts:
+  b453164c-49eb-4379-925b-0cae2b0d6bf5:
+    tabs:
+      -
+        fields:
+          6bc626eb-f69e-4a76-bae6-6f8b701b7b30:
+            required: false
+            sortOrder: 1
+        name: Контент
+        sortOrder: 1
+handle: globalAddress
+name: Адрес

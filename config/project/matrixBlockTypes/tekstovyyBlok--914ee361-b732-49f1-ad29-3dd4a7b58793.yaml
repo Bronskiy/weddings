@@ -1,0 +1,38 @@
+field: f8021b67-d04e-4085-84a7-b5711b172ce1
+fieldLayouts:
+  ff6f0eb4-df0c-40c9-8f8e-6ccdad9cb2e0:
+    tabs:
+      -
+        fields:
+          6c0b3d92-fcbb-4d36-89d2-0ea3fdc7c19a:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  6c0b3d92-fcbb-4d36-89d2-0ea3fdc7c19a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: tekst
+    instructions: ''
+    name: Текст
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Custom.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: tekstovyyBlok
+name: 'Текстовый блок'
+sortOrder: 4

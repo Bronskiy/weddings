@@ -1,0 +1,8 @@
+handle: gallery
+hasUrls: true
+name: Фотогаллерея
+settings:
+  path: '@root/web/images/gallery'
+sortOrder: 2
+type: craft\volumes\Local
+url: '@web/images/gallery'

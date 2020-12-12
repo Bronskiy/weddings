@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 88d54d16-0b3a-4941-acb5-e95eb5ea0039
+handle: mainBlocks
+instructions: ''
+name: Блоки
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_mainblocks}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

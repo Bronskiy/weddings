@@ -1,0 +1,12 @@
+fieldLayouts:
+  ad753efd-5367-45f8-9913-ceed9be6833c:
+    tabs:
+      -
+        fields:
+          ee6c11f4-07cb-4eb8-993a-97b3b41ef174:
+            required: false
+            sortOrder: 1
+        name: Контент
+        sortOrder: 1
+handle: globalAnalytics
+name: Счетчики

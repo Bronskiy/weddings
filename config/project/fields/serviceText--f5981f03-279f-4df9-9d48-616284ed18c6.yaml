@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 7acfc232-44a5-4fd4-b4ce-222c82c4cb9f
+handle: serviceText
+instructions: ''
+name: Описание
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

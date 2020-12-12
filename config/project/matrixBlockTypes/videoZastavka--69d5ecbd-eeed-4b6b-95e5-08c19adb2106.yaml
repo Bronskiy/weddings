@@ -1,0 +1,187 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  d0f897d1-ac70-46ee-b60b-17a2fbdf9711:
+    tabs:
+      -
+        fields:
+          2f412c09-f2dd-4bf0-9b74-84583a649aa5:
+            required: false
+            sortOrder: 5
+          47adfbf6-1898-4ada-9c3e-303426b02dc8:
+            required: false
+            sortOrder: 3
+          5d646d1c-6890-4020-9729-d1e1895dda76:
+            required: false
+            sortOrder: 4
+          c2d94d93-0833-466c-a6da-c9bfd81d1d67:
+            required: false
+            sortOrder: 2
+          cd90b035-2615-49ad-a07a-df5c3d9e2d99:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2f412c09-f2dd-4bf0-9b74-84583a649aa5:
+    contentColumnType: text
+    fieldGroup: null
+    handle: uslugi
+    instructions: ''
+    name: Услуги
+    searchable: true
+    settings:
+      addRowLabel: 'Добавить строку'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Иконка
+                -
+                  - handle
+                  - ikonka
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Название
+                -
+                  - handle
+                  - nazvanie
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Текст
+                -
+                  - handle
+                  - tekst
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - multiline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  47adfbf6-1898-4ada-9c3e-303426b02dc8:
+    contentColumnType: text
+    fieldGroup: null
+    handle: podzagolovok
+    instructions: ''
+    name: Подзаголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5d646d1c-6890-4020-9729-d1e1895dda76:
+    contentColumnType: text
+    fieldGroup: null
+    handle: fonovoeVideo
+    instructions: ''
+    name: 'Фоновое видео'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c2d94d93-0833-466c-a6da-c9bfd81d1d67:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cd90b035-2615-49ad-a07a-df5c3d9e2d99:
+    contentColumnType: string
+    fieldGroup: null
+    handle: fonovayaKartinkaDlyaMobilNykhUstroystv
+    instructions: ''
+    name: 'Фоновая картинка для мобильных устройств'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Добавить изображение'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: videoZastavka
+name: 'Видео заставка'
+sortOrder: 1

@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: provedenieSvadByVFormateVecherinki
+name: 'Проведение свадьбы в формате вечеринки'
+propagationMethod: all
+siteSettings:
+  25c86c4e-fa93-42c2-95c7-588f64bfb08f:
+    enabledByDefault: true
+    hasUrls: true
+    template: blog/_entry
+    uriFormat: svadebnaya_vecherinka
+type: single

@@ -1,0 +1,12 @@
+fieldLayouts:
+  bc2d0c54-4e55-4837-87cb-665b3523f56d:
+    tabs:
+      -
+        fields:
+          f9730cd3-95f7-40bf-888b-18ff07dba2bb:
+            required: false
+            sortOrder: 1
+        name: Контент
+        sortOrder: 1
+handle: globalVk
+name: Vk

@@ -1,0 +1,37 @@
+fieldLayouts:
+  73956532-0aff-4fdc-b3df-2ea83d31df78:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: PFujkj
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: e03553d9-f79c-426d-8435-107fab9b1398
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 6f88a03a-33fb-4d2f-b242-3afcba0a503b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c0460d48-be5b-4ecb-8774-8ea7db527712
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d56e0025-f9a1-41b3-9bc6-156f2d8cc48d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: gallery
+hasTitleField: false
+name: Фотогаллерея
+section: 3935e723-29e1-4709-a9be-1c53df63e3b3
+sortOrder: 1
+titleFormat: '{section.name|raw}'

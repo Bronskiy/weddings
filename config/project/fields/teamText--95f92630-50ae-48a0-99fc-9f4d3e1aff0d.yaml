@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: cbd14a90-6792-4c0d-b7db-feba0d5ac542
+handle: teamText
+instructions: ''
+name: Описание
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,37 @@
+fieldLayouts:
+  dc5e7b15-250f-4805-bbb6-173a803760d7:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Название
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: af3895b9-56b9-4d1d-82cf-651ccc5a0ad1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 6f88a03a-33fb-4d2f-b242-3afcba0a503b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c0460d48-be5b-4ecb-8774-8ea7db527712
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d56e0025-f9a1-41b3-9bc6-156f2d8cc48d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: video
+hasTitleField: true
+name: Видео
+section: 8c04c203-9018-439c-a192-e3b8e901f4a2
+sortOrder: 1
+titleFormat: ''

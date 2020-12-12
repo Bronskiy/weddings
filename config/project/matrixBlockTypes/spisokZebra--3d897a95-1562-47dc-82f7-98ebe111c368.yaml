@@ -1,0 +1,73 @@
+field: f8021b67-d04e-4085-84a7-b5711b172ce1
+fieldLayouts:
+  3c9e3cca-99a8-464e-bd02-a02ebba894aa:
+    tabs:
+      -
+        fields:
+          04e63302-304a-4c21-aeb1-ffe852be572a:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  04e63302-304a-4c21-aeb1-ffe852be572a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: punktSpiska
+    instructions: ''
+    name: 'Пункт списка'
+    searchable: true
+    settings:
+      addRowLabel: 'Добавить строку'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Название
+                -
+                  - handle
+                  - nazvanie
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Описание
+                -
+                  - handle
+                  - opisanie
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - multiline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+handle: spisokZebra
+name: 'Список зебра'
+sortOrder: 5

@@ -1,0 +1,12 @@
+fieldLayouts:
+  952c7347-91a2-4add-870a-9dfa3319efb3:
+    tabs:
+      -
+        fields:
+          f9730cd3-95f7-40bf-888b-18ff07dba2bb:
+            required: false
+            sortOrder: 1
+        name: Контент
+        sortOrder: 1
+handle: globalInstagram
+name: Instagram

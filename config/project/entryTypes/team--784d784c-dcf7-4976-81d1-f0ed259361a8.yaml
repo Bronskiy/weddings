@@ -1,0 +1,29 @@
+fieldLayouts:
+  b5b92528-a175-466b-83c4-b45e2c3adfbc:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Название
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 15a51a6b-02f9-4477-8910-75927aea03c5
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 95f92630-50ae-48a0-99fc-9f4d3e1aff0d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 922b2ca5-585d-45d4-bd10-c90dfcaf824e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+handle: team
+hasTitleField: true
+name: Team
+section: 1ab6bbd4-e755-488f-a535-6115faf0a5c0
+sortOrder: 1
+titleFormat: ''

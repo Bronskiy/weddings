@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 4eb68d87-bff0-45c9-8f45-ad7f04e22d86
+handle: gallereya
+instructions: ''
+name: Галлерея
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_gallereya}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

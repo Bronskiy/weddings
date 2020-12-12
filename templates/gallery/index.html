@@ -1,0 +1,33 @@
+{% extends "_layout" %}
+{% set description = false %}
+{% block content %}
+
+{% include "_includes/_sub_header" with { title: entry.title, image: '/assets/img/5.jpg', breadcrumb: 'on' } %}
+
+<section class="collection-section" id="photo">
+  <div class="auto-container">
+    <div class="row clearfix">
+      {% for imageSet in entry.gallereya.all() %}
+      <div class="collection-block col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="image">
+            {% set image = imageSet.glavnoeIzobrazhenie.one() %}
+            <img src="{{ image.getUrl('image370X400') }}" alt="{{ imageSet.nazvanie }}" />
+            <!-- Overlay Box -->
+            <div class="overlay-box">
+              <div class="overlay-inner">
+                <div class="content portfolio-item" data-blockid="{{ imageSet.id }}" id="portfolio-item-{{ imageSet.id }}">
+                  <h3>{{ imageSet.nazvanie }}</h3>
+                  {# <h3><a href="#" data-toggle="modal" data-target="#modalGallery{{ imageSet.id }}" id="portfolio-item-{{ imageSet.id }}">{{ imageSet.nazvanie }}</a></h3> #}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

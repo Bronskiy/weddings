@@ -1,0 +1,25 @@
+fieldLayouts:
+  07cd5870-6c7e-4723-a042-84cf79a00ed1:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Название
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 89b49f30-7f2b-4eea-ad3b-31414a983feb
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ef642658-8c13-4f93-93fc-8244dd9c6f4a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+handle: footerMenu
+hasTitleField: true
+name: 'Footer Menu'
+section: cb8d1c6e-ba0d-4c8d-ad66-f65a04bf9529
+sortOrder: 1
+titleFormat: ''

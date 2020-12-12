@@ -1,0 +1,91 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  3f84fcaa-2e41-41b2-b452-e15686812a17:
+    tabs:
+      -
+        fields:
+          67985022-982d-4f55-bffd-5a595e37e26e:
+            required: false
+            sortOrder: 3
+          a563c6cc-e704-4664-9b18-ea423ee0abec:
+            required: false
+            sortOrder: 1
+          ec892699-397c-4d14-81ad-21c66dfa756d:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  67985022-982d-4f55-bffd-5a595e37e26e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: tekst
+    instructions: ''
+    name: Текст
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Custom.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  a563c6cc-e704-4664-9b18-ea423ee0abec:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ec892699-397c-4d14-81ad-21c66dfa756d:
+    contentColumnType: string
+    fieldGroup: null
+    handle: izobrazhenie
+    instructions: ''
+    name: Изображение
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: Добавить
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: tekstovyyBlok
+name: 'Текстовый блок'
+sortOrder: 9

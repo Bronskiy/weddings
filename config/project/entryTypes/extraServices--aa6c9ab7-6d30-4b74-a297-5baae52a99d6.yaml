@@ -1,0 +1,25 @@
+fieldLayouts:
+  b3ff8f00-0631-44e8-a527-6a769469f67f:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Название
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: c2a27432-ae43-4e2c-a346-e34b37ea0154
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f5981f03-279f-4df9-9d48-616284ed18c6
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+handle: extraServices
+hasTitleField: true
+name: 'Дополнительные услуги'
+section: 2e025614-7049-456b-ba40-fd62fce836c8
+sortOrder: 1
+titleFormat: ''

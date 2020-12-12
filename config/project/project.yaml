@@ -1,0 +1,71 @@
+dateModified: 1599674296
+email:
+  fromEmail: contact@bronskiy.com
+  fromName: 'http://weddings.iconicline.com/'
+  transportType: craft\mail\transportadapters\Sendmail
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  craft-solspace-express-forms-telegram-notifications:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  express-forms:
+    edition: lite
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      duplicatePreventionEnabled: true
+      emailNotificationsDirectoryPath: /srv/users/serverpilot/apps/weddings/templates/express-forms-demo/_notifications
+      enhancedUI: true
+      honeypotBehaviour: simulate_success
+      honeypotEnabled: ''
+      honeypotInputName: form_handler
+      name: null
+      recaptchaEnabled: '1'
+      recaptchaLoadScript: '1'
+      recaptchaSecretKey: 6LdaOPAUAAAAAGjr0Azq2cMbblSxWIeoTGewJgNJ
+      recaptchaSiteKey: 6LdaOPAUAAAAAHJrrqIv1hxuMwR_HK1YMXe7aYFO
+      showErrorLogBanner: true
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: Weddings
+  schemaVersion: 3.5.13
+  timeZone: Europe/Moscow
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

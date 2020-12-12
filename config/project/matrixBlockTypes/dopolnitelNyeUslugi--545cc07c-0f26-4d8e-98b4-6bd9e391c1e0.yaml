@@ -1,0 +1,33 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  880ce36b-df63-4457-afe1-fa9027f5c34f:
+    tabs:
+      -
+        fields:
+          9aa99197-8f56-4c00-bc52-29fe754fcd4c:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  9aa99197-8f56-4c00-bc52-29fe754fcd4c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: dopolnitelNyeUslugi
+name: 'Дополнительные услуги'
+sortOrder: 8

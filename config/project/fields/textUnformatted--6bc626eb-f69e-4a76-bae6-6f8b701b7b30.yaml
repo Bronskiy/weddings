@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: fddde6dc-4161-4e53-a814-d162f88e1f06
+handle: textUnformatted
+instructions: ''
+name: 'Неформатированный текст'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

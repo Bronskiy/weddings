@@ -1,0 +1,187 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  a799c1f5-37a9-42ba-a793-9eea77260c53:
+    tabs:
+      -
+        fields:
+          3a6fc1f1-8bc5-4b61-8fb0-33526fa6a738:
+            required: false
+            sortOrder: 1
+          b8155752-c8f3-4436-ae3e-bbb62fa2f1fa:
+            required: false
+            sortOrder: 3
+          b8af5ae5-08a4-43ad-965e-4254b747cfbb:
+            required: false
+            sortOrder: 4
+          bd628d3c-361c-4178-a80c-594c8793fe76:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  3a6fc1f1-8bc5-4b61-8fb0-33526fa6a738:
+    contentColumnType: text
+    fieldGroup: null
+    handle: nazvanieSektsii
+    instructions: ''
+    name: 'Название секции'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b8155752-c8f3-4436-ae3e-bbb62fa2f1fa:
+    contentColumnType: text
+    fieldGroup: null
+    handle: voprosOtvetLeft
+    instructions: ''
+    name: 'Вопрос-ответ Слева'
+    searchable: true
+    settings:
+      addRowLabel: 'Добавить строку'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Вопрос
+                -
+                  - handle
+                  - vopros
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Ответ
+                -
+                  - handle
+                  - otvet
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - multiline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  b8af5ae5-08a4-43ad-965e-4254b747cfbb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: voprosOtvetRight
+    instructions: ''
+    name: 'Вопрос-ответ Справа'
+    searchable: true
+    settings:
+      addRowLabel: 'Добавить строку'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Вопрос
+                -
+                  - handle
+                  - vopros
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Ответ
+                -
+                  - handle
+                  - otvet
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  bd628d3c-361c-4178-a80c-594c8793fe76:
+    contentColumnType: string
+    fieldGroup: null
+    handle: fonovoeIzobrazhenie
+    instructions: ''
+    name: 'Фоновое изображение'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Добавить изображение'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:2067eae4-e93b-402f-b233-627ae3d6c0fa'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: chastozadavaemyeVoprosy
+name: 'Частозадаваемые вопросы'
+sortOrder: 12

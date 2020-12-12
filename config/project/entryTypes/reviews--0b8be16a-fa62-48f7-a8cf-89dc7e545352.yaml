@@ -1,0 +1,25 @@
+fieldLayouts:
+  74737faa-cbd5-422b-a2d8-0a35fa43d484:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Название
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 20e867f4-b5a8-4a32-8c19-5942343b5022
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ee6c11f4-07cb-4eb8-993a-97b3b41ef174
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Tab 1'
+        sortOrder: 1
+handle: reviews
+hasTitleField: true
+name: Отзывы
+section: da982bc2-3f01-454a-84a6-caa0c32077e0
+sortOrder: 1
+titleFormat: ''

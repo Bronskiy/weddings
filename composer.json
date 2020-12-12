@@ -1,13 +1,15 @@
 {
   "require": {
+    "aelvan/imager": "v2.4.0",
     "bronskiycraftsolpaceexpressformstelegram/craft-solspace-express-forms-telegram-notifications": "^1.0",
-    "carlcs/craft-redactorcustomstyles": "3.0.3",
-    "craftcms/cms": "3.4.22.1",
+    "carlcs/craft-redactorcustomstyles": "3.0.4",
+    "craftcms/cms": "3.5.16",
     "craftcms/contact-form": "2.2.7",
     "craftcms/contact-form-honeypot": "1.0.2",
     "craftcms/element-api": "2.6.0",
-    "craftcms/redactor": "2.6.1",
-    "solspace/craft-express-forms": "1.0.5",
+    "craftcms/redactor": "2.8.5",
+    "mmikkel/retcon": "2.2.1",
+    "solspace/craft-express-forms": "1.0.8",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {

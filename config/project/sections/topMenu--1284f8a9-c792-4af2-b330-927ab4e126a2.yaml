@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: topMenu
+name: 'Верхнее меню'
+propagationMethod: all
+siteSettings:
+  25c86c4e-fa93-42c2-95c7-588f64bfb08f:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: ''
+structure:
+  maxLevels: 1
+  uid: 733454f3-e269-403b-ab84-55f062153c54
+type: structure

@@ -1,0 +1,54 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  2e36a092-f9c9-4336-8237-6a24858d6fb7:
+    tabs:
+      -
+        fields:
+          9e909252-c6c1-4328-9cf3-404d52ce2f45:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  9e909252-c6c1-4328-9cf3-404d52ce2f45:
+    contentColumnType: text
+    fieldGroup: null
+    handle: video
+    instructions: ''
+    name: Видео
+    searchable: true
+    settings:
+      addRowLabel: 'Добавить код'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Код iframe'
+                -
+                  - handle
+                  - kodIframe
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+handle: videoBloki
+name: 'Видео блоки'
+sortOrder: 2

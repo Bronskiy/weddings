@@ -1,0 +1,54 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  5abbdf5f-e622-4569-b911-a0b689fcd67b:
+    tabs:
+      -
+        fields:
+          3b1f1317-055e-4378-bed7-83681941d1f0:
+            required: false
+            sortOrder: 2
+          557561dc-9255-4e10-b040-21305bc08298:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  3b1f1317-055e-4378-bed7-83681941d1f0:
+    contentColumnType: text
+    fieldGroup: null
+    handle: podzagolovok
+    instructions: ''
+    name: Подзаголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  557561dc-9255-4e10-b040-21305bc08298:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: uslugi
+name: Услуги
+sortOrder: 7

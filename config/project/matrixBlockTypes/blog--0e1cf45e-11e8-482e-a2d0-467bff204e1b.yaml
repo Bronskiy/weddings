@@ -1,0 +1,33 @@
+field: ab1fcc9b-956d-4e1c-8c1c-caac8a904b8b
+fieldLayouts:
+  447a5537-9ae7-4651-9fad-4ca4bc3932f8:
+    tabs:
+      -
+        fields:
+          14ec23c8-652f-44a7-9320-9827a8c45600:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  14ec23c8-652f-44a7-9320-9827a8c45600:
+    contentColumnType: text
+    fieldGroup: null
+    handle: zagolovok
+    instructions: ''
+    name: Заголовок
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: blog
+name: Блог
+sortOrder: 13

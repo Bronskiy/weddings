@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: kakProvestiPodgotovkuKIdealNoySvadBe
+name: 'Как провести подготовку к идеальной свадьбе'
+propagationMethod: all
+siteSettings:
+  25c86c4e-fa93-42c2-95c7-588f64bfb08f:
+    enabledByDefault: true
+    hasUrls: true
+    template: blog/_entry
+    uriFormat: kak_provesti_podgotovku_k_svadibe
+type: single

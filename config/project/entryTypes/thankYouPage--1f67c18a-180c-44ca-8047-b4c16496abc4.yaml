@@ -1,0 +1,21 @@
+fieldLayouts:
+  808be39d-5c20-4d5c-821b-a5f48d53f519:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Название
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 63b16ff1-de60-4e2d-89f7-292362b79f26
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+handle: thankYouPage
+hasTitleField: true
+name: 'Thank you page'
+section: 2a81fce4-28f4-4aa2-8284-517e4da63532
+sortOrder: 1
+titleFormat: ''

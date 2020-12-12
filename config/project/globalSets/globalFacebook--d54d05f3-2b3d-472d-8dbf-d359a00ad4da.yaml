@@ -1,0 +1,12 @@
+fieldLayouts:
+  0c1c4137-b367-4f3e-806b-c1c0b46ed597:
+    tabs:
+      -
+        fields:
+          f9730cd3-95f7-40bf-888b-18ff07dba2bb:
+            required: false
+            sortOrder: 1
+        name: Контент
+        sortOrder: 1
+handle: globalFacebook
+name: Facebook

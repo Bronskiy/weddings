@@ -1,0 +1,23 @@
+contentColumnType: text
+fieldGroup: fddde6dc-4161-4e53-a814-d162f88e1f06
+handle: commonBody
+instructions: ''
+name: Текст
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes:
+    - 2067eae4-e93b-402f-b233-627ae3d6c0fa
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Custom.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

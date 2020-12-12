@@ -1,0 +1,57 @@
+contentColumnType: text
+fieldGroup: 650725a0-de11-46aa-b372-0d120f8c886e
+handle: videoKod
+instructions: ''
+name: 'Видео код'
+searchable: true
+settings:
+  addRowLabel: 'Добавить видео'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Название
+            -
+              - handle
+              - nazvanie
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Embed код'
+            -
+              - handle
+              - embedKod
+            -
+              - width
+              - ''
+            -
+              - type
+              - multiline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

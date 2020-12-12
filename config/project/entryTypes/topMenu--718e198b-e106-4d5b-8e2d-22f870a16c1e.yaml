@@ -1,0 +1,25 @@
+fieldLayouts:
+  a89c0ba1-790a-47b5-8493-ad8904915887:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Название
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 89b49f30-7f2b-4eea-ad3b-31414a983feb
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ef642658-8c13-4f93-93fc-8244dd9c6f4a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Контент
+        sortOrder: 1
+handle: topMenu
+hasTitleField: true
+name: 'Top Menu'
+section: 1284f8a9-c792-4af2-b330-927ab4e126a2
+sortOrder: 1
+titleFormat: ''
